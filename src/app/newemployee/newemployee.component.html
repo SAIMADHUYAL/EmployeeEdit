@@ -1,1 +1,29 @@
-<p>newemployee works!</p>
+<div style="margin: 10%;">
+    <table class="table table-bordered table-responsive-md table-hover text-center" >
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeList">
+            <td scope="row">{{employee.id}}</td>
+            <td scope="row">{{employee.employee_name}}</td>
+            <td scope="row">{{employee.employee_salary}}</td>
+            <td scope="row">{{employee.employee_age }}</td>    
+          </tr>
+        
+          
+         <!-- <tr *ngIf="ShowEdit; else elseBlock">
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.id"/></td>
+            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.employee_name"/></td>
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_salary"/></td>
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_age"/></td>
+          </tr>-->
+        </tbody>
+      </table>
+</div>
+
