@@ -3,39 +3,26 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">Employee ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
+            <th scope="col">Name</th>
             <th scope="col">Salary</th>
-            <th scope="col">DOB</th>
-            <th scope="col">Email</th>
-            <th scope="col">Action</th>
+            <th scope="col">Age</th>
           </tr>
         </thead>
         <tbody>
-          <ng-template #elseBlock>
           <tr *ngFor="let employee of emplist">
-            <td scope="row">{{employee.employeeId}}</td>
-            <td scope="row">{{employee.firstName}}</td>
-            <td scope="row">{{employee.lastName}}</td>
-            <td scope="row">{{employee.salary | currency }}</td>
-            <td scope="row">{{employee.DOB | date : 'MMM dd,yyyy' | uppercase }}</td>
-            <td scope="row">{{employee.email}}</td>
-            <td scope="row"><button class="btn btn-success" (click)="UpdateEmp()" id="update" *ngIf="ShowEdit; else elseBlock">Update</button>
-            <ng-template #elseBlock><button class="btn btn-primary" (click)="EditEmp(employee)" id="edit">Edit</button></ng-template></td>
-    
+            <td scope="row">{{employee.id}}</td>
+            <td scope="row">{{employee.employee_name}}</td>
+            <td scope="row">{{employee.employee_salary}}</td>
+            <td scope="row">{{employee.employee_age }}</td>    
           </tr>
-        </ng-template>
         
           
-          <tr *ngIf="ShowEdit; else elseBlock">
-            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employeeId"/></td>
-            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.firstName"/></td>
-            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.lastName"/></td>
-            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.salary"/></td>
-            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.DOB"/></td>
-            <td scope="row"><input type="email" class="form-control" [(ngModel)]="employee.email"/></td>
-            <td scope="row"><button class="btn btn-success" (click)="UpdateEmp()" id="update" *ngIf="ShowEdit; else elseBlock">Update</button></td>
-          </tr>
+         <!-- <tr *ngIf="ShowEdit; else elseBlock">
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.id"/></td>
+            <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.employee_name"/></td>
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_salary"/></td>
+            <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_age"/></td>
+          </tr>-->
         </tbody>
       </table>
 </div>
