@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './employee';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-edit-employee',
@@ -8,33 +9,16 @@ import { Employee } from './employee';
 })
 export class EditEmployeeComponent implements OnInit {
 
-  constructor() { }
+  emplist: Employee[] = [];
+  //Gets called first
+  constructor(private productService : ProductService) { }
 
+  //This will be called by default just after the constructor is executed.
   ngOnInit(): void {
+
+    this.emplist = this.productService.getEmployees();
   }
 
-  emplist: Employee[] = [{
-    employeeId: 1,
-    firstName:  'Ramin',
-    lastName: 'Ahmadi',
-    salary: '$2000',
-    DOB:  '05/06/1994',
-    email : 'hello@gmail.com',
-  },{
-    employeeId: 2,
-    firstName:  'Ravi',
-    lastName: 'Ashwin',
-    salary: '$5463',
-    DOB:  '21/01/1987',
-    email :   'raviashwin@gmail.com',
-  },{
-      employeeId: 3,
-      firstName:  'Virat',
-      lastName: 'Kohlli',
-      salary: '$3214',
-      DOB:  '21/01/1987',
-      email :   'kohlivirat@gmail.com',
-  }];
 
   employee!: Employee;
   ShowEdit = false;

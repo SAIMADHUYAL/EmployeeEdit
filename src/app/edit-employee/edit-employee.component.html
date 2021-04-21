@@ -17,8 +17,8 @@
             <td scope="row">{{employee.employeeId}}</td>
             <td scope="row">{{employee.firstName}}</td>
             <td scope="row">{{employee.lastName}}</td>
-            <td scope="row">{{employee.salary}}</td>
-            <td scope="row">{{employee.DOB}}</td>
+            <td scope="row">{{employee.salary | currency }}</td>
+            <td scope="row">{{employee.DOB | date : 'MMM dd,yyyy' | uppercase }}</td>
             <td scope="row">{{employee.email}}</td>
             <td scope="row"><button class="btn btn-success" (click)="UpdateEmp()" id="update" *ngIf="ShowEdit; else elseBlock">Update</button>
             <ng-template #elseBlock><button class="btn btn-primary" (click)="EditEmp(employee)" id="edit">Edit</button></ng-template></td>
