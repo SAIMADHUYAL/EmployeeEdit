@@ -21,7 +21,7 @@ export class EditEmployeeComponent implements OnInit {
     this.productService.getProductList()
     .subscribe((res:any) => {
       console.log(res);
-      this.emplist = res.data;
+      this.emplist = res;
     });
   }
 

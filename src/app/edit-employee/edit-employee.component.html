@@ -12,7 +12,7 @@
           <tr *ngFor="let employee of emplist">
             <td scope="row">{{employee.id}}</td>
             <td scope="row">{{employee.employee_name}}</td>
-            <td scope="row">{{employee.employee_salary}}</td>
+            <td scope="row">{{employee.employee_salary | currency}}</td>
             <td scope="row">{{employee.employee_age }}</td>    
           </tr>
         
