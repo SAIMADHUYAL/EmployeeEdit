@@ -41,7 +41,4 @@ export class EmployeeService {
         return res; //4. Send the res/data to the component.
       }));
     }
-
-
-
 }

@@ -16,7 +16,7 @@ export class NewemployeeComponent implements OnInit {
     //this.employeeList = this.employeeService.getEmployees();
     this.employeeService.getEmployeeList()
     .subscribe((res:any) => {
-      console.log(res);
+      console.log(res.data);
       this.employeeList = res.data;
     });
   }
