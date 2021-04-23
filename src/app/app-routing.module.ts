@@ -13,7 +13,7 @@ const routes: Routes = [
   {path : 'features',component : FeaturesComponent},
   {path : 'employees',component : EditEmployeeComponent},
   {path : 'about',component : AboutComponent},
-  {path : 'employee',redirectTo:'/employees'},
+  {path : 'emp',redirectTo:'/employees',pathMatch : 'prefix'},
   {path : 'sai',redirectTo : 'features'},
   {path : '**',component : PageNotFoundComponent}
   
