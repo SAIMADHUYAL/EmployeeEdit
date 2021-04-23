@@ -1,4 +1,65 @@
-<div style="margin: 10%;">
+
+<!-- This is for Single Page Application -  Router and Navigation(for Module 5)-->
+
+<!--
+
+  Step 1: we added the NAvBar and created the components for each Navbar item.
+
+  Step 2: Need to provide the URLs for each components.
+
+  step 3: need to configure those components in the app-routing.module.ts file.
+  {path : 'features',component : FeaturesComponent},
+
+  //If the app-routing.module.ts is not there the command is 'ng g app-routing --flat m=app'.
+
+  Step 4: need add the components in the 'app.component.html' wi the tag '<router-outlet></router-oulet>'. This will display the 
+    Each page or component in the main html when its clicked. 
+
+  step 5: Remove the 'href' and add 'routerLink' for not refreshing the page i.e., for not loading into the server everytime when the link clicks.
+  
+  Step 6: Create the page-not-found component.'**' directly invokes the Page not found html.
+  {path : '**',component : PageNotFoundComponent}.
+  This must be declared after all the routing links has been declared.
+
+-->
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive = "active" [routerLinkActiveOptions]=" { exact : true }">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive = "active">
+        <a class="nav-link" routerLink="/features">Features</a>
+      </li>
+      <li class="nav-item" routerLinkActive = "active">
+        <a class="nav-link" routerLink="/employees">Employees</a>
+      </li>
+      <li class="nav-item" routerLinkActive = "active">
+        <a class="nav-link" routerLink="/about">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+<div style="margin: 2%;">
     <table class="table table-bordered table-responsive-md table-hover text-center" >
         <thead class="thead-dark">
           <tr>
@@ -17,13 +78,15 @@
           </tr>
         
           
-         <!-- <tr *ngIf="ShowEdit; else elseBlock">
+         <tr *ngIf="ShowEdit; else elseBlock">
             <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.id"/></td>
             <td scope="row"><input type="text" class="form-control" [(ngModel)]="employee.employee_name"/></td>
             <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_salary"/></td>
             <td scope="row"><input type="number" class="form-control" [(ngModel)]="employee.employee_age"/></td>
-          </tr>-->
+          </tr>
         </tbody>
       </table>
 </div>
+
+-->
 

@@ -7,12 +7,22 @@ import { AppComponent } from './app.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewemployeeComponent } from './newemployee/newemployee.component';
+import { HomeComponent } from './home/home.component';
+import { FeaturesComponent } from './features/features.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { AboutComponent } from './about/about.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditEmployeeComponent,
-    NewemployeeComponent
+    NewemployeeComponent,
+    HomeComponent,
+    FeaturesComponent,
+    EmployeesComponent,
+    AboutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
