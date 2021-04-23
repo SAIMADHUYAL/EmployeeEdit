@@ -12,6 +12,8 @@ import { FeaturesComponent } from './features/features.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AddEmployeeComponent } from './edit-employee/component/add-employee/add-employee.component';
+import { EmployeeDetailsComponent } from './edit-employee/component/employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
     FeaturesComponent,
     EmployeesComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddEmployeeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
