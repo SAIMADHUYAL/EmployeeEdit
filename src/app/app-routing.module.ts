@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './auth/component/login/login.component';
 import { AddEmployeeComponent } from './edit-employee/component/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from './edit-employee/component/employee-details/employee-details.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
@@ -8,6 +9,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { FeaturesComponent } from './features/features.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AuthGuard } from './shared/gaurds/auth.guard';
 
 const routes: Routes = [
 
@@ -21,9 +23,10 @@ const routes: Routes = [
   ]},
 
 
-  {path : 'about',component : AboutComponent},
+  {path : 'about',component : AboutComponent , canActivate: [AuthGuard]},
   {path : 'emp',redirectTo:'/employees',pathMatch : 'prefix'},
   {path : 'sai',redirectTo : 'features'},
+  {path: 'login',component : LoginComponent},
   {path : '**',component : PageNotFoundComponent}
     
 ];
