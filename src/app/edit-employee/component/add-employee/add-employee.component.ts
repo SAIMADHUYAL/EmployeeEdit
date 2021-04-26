@@ -21,7 +21,7 @@ export class AddEmployeeComponent implements OnInit {
     email : new FormControl('', Validators.required)
 
 
-    // step:3 coneecting html <form> to the above variables.
+    // step:3 conecting html <form> to the above variables.
 
 
   });
