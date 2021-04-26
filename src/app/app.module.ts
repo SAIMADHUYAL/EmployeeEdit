@@ -18,6 +18,7 @@ import { LoginComponent } from './auth/component/login/login.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     EditEmployeeComponent,
     NewemployeeComponent,
     HomeComponent,
