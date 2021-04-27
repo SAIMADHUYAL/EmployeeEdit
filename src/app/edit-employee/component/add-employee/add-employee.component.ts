@@ -18,7 +18,7 @@ export class AddEmployeeComponent implements OnInit {
     // step 2: Mapping the <form> elements in the ts file.
     name  : new FormControl('', Validators.required),
     phone : new FormControl('', Validators.required),
-    email : new FormControl('', Validators.required)
+    email : new FormControl('', [Validators.required, Validators.email])
 
 
     // step:3 conecting html <form> to the above variables.
@@ -26,12 +26,14 @@ export class AddEmployeeComponent implements OnInit {
 
   });
 
+  isSaved = false;
   constructor() { }
 
   ngOnInit(): void {
   }
   onSubmitAddEmployee(): any{
-    console.log(this.addEmployee.value);
+    console.log(this.addEmployee.value.name);
+    this.isSaved = true;
   }
 
 }

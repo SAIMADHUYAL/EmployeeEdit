@@ -38,3 +38,61 @@
         7. ElementRef
         In previous versions of Angular, when we want to create the reference of an element in the template, we can use @ViewChild or @ViewChildren or inject the host using ElementRef directly. But, the problem is that ElementRef had its nativeElement property typed like any other element. But now in Angular 6, we can use type ElementRef more strictly if we want.</p>
 </div>
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Add Employee</h1>
+        <!-- TODO: learn to redirect to another url in angular -->
+        <button class="btn btn-dark">Go Back</button>
+  
+      </div>
+  
+      <form class="col-md-6 offset-md-3" ngNativeValidate (ngSubmit)="onEmployeeDetailsSubmit()">
+        <div class="form-group row">
+          <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+  
+            <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)] = "employeeDetails.name" name="name" required/>
+            <div class="invalid-feedback">
+              <div>Name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="staticPhone" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Enter Phone" [(ngModel)] = "employeeDetails.phone" name="phone" required/>
+            <div class="invalid-feedback">
+              <div>Phone is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Enter Email" [(ngModel)] = "employeeDetails.email" name="email" required/>
+            <div class="invalid-feedback">
+              <div>Email is required</div>
+              <div>Email seems to be not valid</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="alert alert-success">
+          Saved Successfully
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <!--TODO: disable the button if the form is invalid in angular-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

@@ -11,6 +11,12 @@ export class FeaturesComponent implements OnInit {
 
   constructor(private routerLink: Router) { }
 
+  employeeDetails = {
+    name: '',
+    email: '',
+    phone: ''
+  };
+
   ngOnInit(): void {
   }
 
@@ -18,6 +24,10 @@ export class FeaturesComponent implements OnInit {
   gotohomepage(){
 
     this.routerLink.navigate(['/']);
+  }
+
+  onEmployeeDetailsSubmit(){
+    console.log(this.employeeDetails);
   }
 
 }
